@@ -1,0 +1,1107 @@
+{
+  "title": "Infra Dashboard",
+  "description": "",
+  "widgets": [
+    {
+      "id": 6691837474548591,
+      "layout": {
+        "x": 47,
+        "y": 1,
+        "width": 96,
+        "height": 8
+      },
+      "definition": {
+        "type": "image",
+        "url": "http://i1.wp.com/airisdata.com/wp-content/uploads/2016/01/kafka-logo-600x390.jpg?resize=600%2C390",
+        "sizing": "fit"
+      }
+    },
+    {
+      "id": 2453049606479552,
+      "layout": {
+        "x": 47,
+        "y": 25,
+        "width": 96,
+        "height": 8
+      },
+      "definition": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cassandra_logo.svg/279px-Cassandra_logo.svg.png",
+        "sizing": "fit"
+      }
+    },
+    {
+      "id": 2901844287071000,
+      "layout": {
+        "x": 47,
+        "y": 33,
+        "width": 15,
+        "height": 8
+      },
+      "definition": {
+        "title": "Hosts",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "cassandra.can_connect",
+        "grouping": "cluster"
+      }
+    },
+    {
+      "id": 8196015244047285,
+      "layout": {
+        "x": 62,
+        "y": 11,
+        "width": 24,
+        "height": 4
+      },
+      "definition": {
+        "title": "Clusters",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "kafka.can_connect",
+        "grouping": "cluster",
+        "group_by": ["cluster"],
+        "tags": ["app:kafka"]
+      }
+    },
+    {
+      "id": 6168252569947393,
+      "layout": {
+        "x": 74,
+        "y": 37,
+        "width": 12,
+        "height": 4
+      },
+      "definition": {
+        "title": "Datacenters",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "cassandra.can_connect",
+        "grouping": "cluster",
+        "group_by": ["dc"]
+      }
+    },
+    {
+      "id": 6056077833737236,
+      "layout": {
+        "x": 34,
+        "y": 7,
+        "width": 12,
+        "height": 8
+      },
+      "definition": {
+        "title": "Total hosts",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "datadog.agent.up",
+        "grouping": "cluster"
+      }
+    },
+    {
+      "id": 6264797164838207,
+      "layout": {
+        "x": 47,
+        "y": 58,
+        "width": 15,
+        "height": 8
+      },
+      "definition": {
+        "title": "Hosts",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "zookeeper.ruok",
+        "grouping": "cluster",
+        "tags": ["app:zookeeper"]
+      }
+    },
+    {
+      "id": 3817358954040544,
+      "layout": {
+        "x": 47,
+        "y": 52,
+        "width": 47,
+        "height": 8
+      },
+      "definition": {
+        "type": "image",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Apache_ZooKeeper_logo.svg/langfr-330px-Apache_ZooKeeper_logo.svg.png",
+        "sizing": "contain",
+        "horizontal_align": "left"
+      }
+    },
+    {
+      "id": 1067163667957073,
+      "layout": {
+        "x": 95,
+        "y": 52,
+        "width": 48,
+        "height": 8
+      },
+      "definition": {
+        "type": "image",
+        "url": "https://graphiteapp.org/../img/graphite-logo_color.png",
+        "sizing": "fit"
+      }
+    },
+    {
+      "id": 3545414531419813,
+      "layout": {
+        "x": 23,
+        "y": 7,
+        "width": 11,
+        "height": 8
+      },
+      "definition": {
+        "title": "apne1",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "datadog.agent.up",
+        "grouping": "cluster",
+        "tags": ["env:aws-production-apne1"]
+      }
+    },
+    {
+      "id": 672812892054554,
+      "layout": {
+        "x": 47,
+        "y": 7,
+        "width": 15,
+        "height": 8
+      },
+      "definition": {
+        "title": "Hosts",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "kafka.can_connect",
+        "grouping": "cluster",
+        "tags": ["app:kafka"]
+      }
+    },
+    {
+      "id": 6004813186376946,
+      "layout": {
+        "x": 11,
+        "y": 7,
+        "width": 12,
+        "height": 8
+      },
+      "definition": {
+        "title": "use1",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "datadog.agent.up",
+        "grouping": "cluster",
+        "tags": ["env:aws-production-use1"]
+      }
+    },
+    {
+      "id": 633104406428199,
+      "layout": {
+        "x": 62,
+        "y": 7,
+        "width": 8,
+        "height": 4
+      },
+      "definition": {
+        "title": "apne1",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "kafka.can_connect",
+        "grouping": "cluster",
+        "tags": ["app:kafka", "env:aws-production-apne1"]
+      }
+    },
+    {
+      "id": 7932183223795867,
+      "layout": {
+        "x": 70,
+        "y": 7,
+        "width": 8,
+        "height": 4
+      },
+      "definition": {
+        "title": "euw1",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "kafka.can_connect",
+        "grouping": "cluster",
+        "tags": ["app:kafka", "env:aws-production-euw1"]
+      }
+    },
+    {
+      "id": 3565867530576392,
+      "layout": {
+        "x": 78,
+        "y": 7,
+        "width": 8,
+        "height": 4
+      },
+      "definition": {
+        "title": "use1",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "kafka.can_connect",
+        "grouping": "cluster",
+        "tags": ["app:kafka", "env:aws-production-use1"]
+      }
+    },
+    {
+      "id": 400273960415315,
+      "layout": {
+        "x": 62,
+        "y": 58,
+        "width": 11,
+        "height": 4
+      },
+      "definition": {
+        "title": "apne1",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "zookeeper.ruok",
+        "grouping": "cluster",
+        "tags": ["env:aws-production-apne1", "app:zookeeper"]
+      }
+    },
+    {
+      "id": 6482235515335011,
+      "layout": {
+        "x": 73,
+        "y": 58,
+        "width": 10,
+        "height": 4
+      },
+      "definition": {
+        "title": "euw1",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "zookeeper.ruok",
+        "grouping": "cluster",
+        "tags": ["env:aws-production-euw1", "app:zookeeper"]
+      }
+    },
+    {
+      "id": 3783972862824987,
+      "layout": {
+        "x": 83,
+        "y": 58,
+        "width": 11,
+        "height": 4
+      },
+      "definition": {
+        "title": "use1",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "zookeeper.ruok",
+        "grouping": "cluster",
+        "tags": ["env:aws-production-use1", "app:zookeeper"]
+      }
+    },
+    {
+      "id": 241284271895236,
+      "layout": {
+        "x": 62,
+        "y": 62,
+        "width": 32,
+        "height": 4
+      },
+      "definition": {
+        "title": "Clusters",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "zookeeper.ruok",
+        "grouping": "cluster",
+        "group_by": ["cluster"],
+        "tags": ["app:zookeeper"]
+      }
+    },
+    {
+      "id": 6009494689700300,
+      "layout": {
+        "x": 62,
+        "y": 33,
+        "width": 8,
+        "height": 4
+      },
+      "definition": {
+        "title": "apne1",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "cassandra.can_connect",
+        "grouping": "cluster",
+        "tags": ["env:aws-production-apne1", "app:cassandra"]
+      }
+    },
+    {
+      "id": 66868391704692,
+      "layout": {
+        "x": 70,
+        "y": 33,
+        "width": 8,
+        "height": 4
+      },
+      "definition": {
+        "title": "euw1",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "cassandra.can_connect",
+        "grouping": "cluster",
+        "tags": ["env:aws-production-euw1", "app:cassandra"]
+      }
+    },
+    {
+      "id": 1370315456087737,
+      "layout": {
+        "x": 78,
+        "y": 33,
+        "width": 8,
+        "height": 4
+      },
+      "definition": {
+        "title": "use1",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "cassandra.can_connect",
+        "grouping": "cluster",
+        "tags": ["env:aws-production-use1", "app:cassandra"]
+      }
+    },
+    {
+      "id": 4805291171815298,
+      "layout": {
+        "x": 62,
+        "y": 37,
+        "width": 12,
+        "height": 4
+      },
+      "definition": {
+        "title": "Clusters",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "cassandra.can_connect",
+        "grouping": "cluster",
+        "group_by": ["cluster"]
+      }
+    },
+    {
+      "id": 6112413461640724,
+      "layout": {
+        "x": 0,
+        "y": 7,
+        "width": 11,
+        "height": 8
+      },
+      "definition": {
+        "title": "euw1",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "datadog.agent.up",
+        "grouping": "cluster",
+        "tags": ["env:aws-production-euw1"]
+      }
+    },
+    {
+      "id": 4491368920260987,
+      "layout": {
+        "x": 86,
+        "y": 7,
+        "width": 11,
+        "height": 8
+      },
+      "definition": {
+        "title": "Size",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "query_value",
+        "requests": [
+          {
+            "q": "sum:system.disk.used{app:kafka,device:/raid0}",
+            "aggregator": "avg"
+          }
+        ],
+        "autoscale": true,
+        "precision": 0
+      }
+    },
+    {
+      "id": 7037822376321597,
+      "layout": {
+        "x": 96,
+        "y": 33,
+        "width": 8,
+        "height": 8
+      },
+      "definition": {
+        "title": "Size",
+        "title_size": "13",
+        "title_align": "left",
+        "type": "query_value",
+        "requests": [
+          {
+            "q": "sum:system.disk.used{app:cassandra,device:/raid0}",
+            "aggregator": "avg"
+          }
+        ],
+        "autoscale": true,
+        "precision": 0
+      }
+    },
+    {
+      "id": 7358130817049456,
+      "layout": {
+        "x": 97,
+        "y": 7,
+        "width": 13,
+        "height": 8
+      },
+      "definition": {
+        "title": "Messages / s",
+        "title_size": "13",
+        "title_align": "center",
+        "time": {
+          "live_span": "1m"
+        },
+        "type": "query_value",
+        "requests": [
+          {
+            "q": "sum:kafka.messages_in.rate{app:kafka}",
+            "aggregator": "max"
+          }
+        ],
+        "autoscale": true,
+        "precision": 0
+      }
+    },
+    {
+      "id": 1088121942081933,
+      "layout": {
+        "x": 104,
+        "y": 33,
+        "width": 10,
+        "height": 8
+      },
+      "definition": {
+        "title": "Reads",
+        "title_size": "13",
+        "title_align": "center",
+        "time": {
+          "live_span": "1m"
+        },
+        "type": "query_value",
+        "requests": [
+          {
+            "q": "per_second(sum:cassandra.latency.count{app:cassandra,clientrequest:read})",
+            "aggregator": "max"
+          }
+        ],
+        "autoscale": true,
+        "precision": 0
+      }
+    },
+    {
+      "id": 8722270369795831,
+      "layout": {
+        "x": 114,
+        "y": 33,
+        "width": 10,
+        "height": 8
+      },
+      "definition": {
+        "title": "Writes",
+        "title_size": "13",
+        "title_align": "center",
+        "time": {
+          "live_span": "1m"
+        },
+        "type": "query_value",
+        "requests": [
+          {
+            "q": "per_second(sum:cassandra.latency.count{app:cassandra,clientrequest:write})",
+            "aggregator": "max"
+          }
+        ],
+        "autoscale": true,
+        "precision": 0
+      }
+    },
+    {
+      "id": 4713003778410099,
+      "layout": {
+        "x": 124,
+        "y": 33,
+        "width": 19,
+        "height": 8
+      },
+      "definition": {
+        "title": "Hints (24 hours)",
+        "title_size": "13",
+        "title_align": "center",
+        "show_legend": false,
+        "time": {
+          "live_span": "1d"
+        },
+        "type": "timeseries",
+        "requests": [
+          {
+            "q": "per_second(sum:cassandra.total_hints.count{app:cassandra} by {dc})",
+            "style": {
+              "palette": "dog_classic",
+              "line_type": "solid",
+              "line_width": "normal"
+            },
+            "display_type": "area"
+          }
+        ]
+      }
+    },
+    {
+      "id": 3905363692769163,
+      "layout": {
+        "x": 132,
+        "y": 7,
+        "width": 11,
+        "height": 8
+      },
+      "definition": {
+        "title": "Under Replicated",
+        "title_size": "13",
+        "title_align": "center",
+        "time": {
+          "live_span": "10m"
+        },
+        "type": "query_value",
+        "requests": [
+          {
+            "q": "sum:kafka.replication.under_replicated_partitions{app:kafka}",
+            "aggregator": "last",
+            "conditional_formats": [
+              {
+                "hide_value": false,
+                "comparator": "<=",
+                "palette": "white_on_green",
+                "value": 0
+              },
+              {
+                "hide_value": false,
+                "comparator": ">",
+                "palette": "white_on_red",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "autoscale": true,
+        "precision": 0
+      }
+    },
+    {
+      "id": 2805380974175674,
+      "layout": {
+        "x": 0,
+        "y": 52,
+        "width": 46,
+        "height": 8
+      },
+      "definition": {
+        "type": "image",
+        "url": "https://cdn-images-1.medium.com/max/800/1*LOFbTP2SxXcFpM_qTsUSuw.png",
+        "sizing": "fit"
+      }
+    },
+    {
+      "id": 2443676106654621,
+      "layout": {
+        "x": 0,
+        "y": 58,
+        "width": 18,
+        "height": 4
+      },
+      "definition": {
+        "title": "Masters",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "datadog.agent.up",
+        "grouping": "cluster",
+        "tags": ["app:jenkins-ci"]
+      }
+    },
+    {
+      "id": 5806531918636490,
+      "layout": {
+        "x": 0,
+        "y": 62,
+        "width": 18,
+        "height": 4
+      },
+      "definition": {
+        "title": "Slaves",
+        "title_size": "16",
+        "title_align": "center",
+        "type": "check_status",
+        "check": "datadog.agent.up",
+        "grouping": "cluster",
+        "tags": ["app:jenkins-ci-slave"]
+      }
+    },
+    {
+      "id": 1435275759128939,
+      "layout": {
+        "x": 18,
+        "y": 58,
+        "width": 12,
+        "height": 8
+      },
+      "definition": {
+        "title": "Queue size",
+        "title_size": "13",
+        "title_align": "center",
+        "time": {
+          "live_span": "1m"
+        },
+        "type": "query_value",
+        "requests": [
+          {
+            "q": "sum:jenkins.queue.size{jenkins_url:https://jenkins.teads.net/}",
+            "aggregator": "max",
+            "conditional_formats": [
+              {
+                "hide_value": false,
+                "comparator": ">=",
+                "palette": "white_on_yellow",
+                "value": 10
+              },
+              {
+                "hide_value": false,
+                "comparator": ">=",
+                "palette": "white_on_red",
+                "value": 30
+              },
+              {
+                "hide_value": false,
+                "comparator": "<",
+                "palette": "white_on_green",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "autoscale": true,
+        "precision": 0
+      }
+    },
+    {
+      "id": 3053938929025198,
+      "layout": {
+        "x": 30,
+        "y": 58,
+        "width": 16,
+        "height": 8
+      },
+      "definition": {
+        "title": "Success Ratio",
+        "title_size": "13",
+        "title_align": "center",
+        "time": {
+          "live_span": "15m"
+        },
+        "type": "query_value",
+        "requests": [
+          {
+            "q": "(sum:jenkins.job.completed{result:success}.as_count()/sum:jenkins.job.completed{*}.as_count())*100",
+            "aggregator": "avg",
+            "conditional_formats": [
+              {
+                "hide_value": false,
+                "comparator": ">=",
+                "palette": "white_on_green",
+                "value": 70
+              },
+              {
+                "hide_value": false,
+                "comparator": "<",
+                "palette": "white_on_yellow",
+                "value": 70
+              },
+              {
+                "hide_value": false,
+                "comparator": "<",
+                "palette": "white_on_red",
+                "value": 50
+              }
+            ]
+          }
+        ],
+        "autoscale": true,
+        "custom_unit": "%",
+        "precision": 0
+      }
+    },
+    {
+      "id": 6795249898977425,
+      "layout": {
+        "x": 110,
+        "y": 7,
+        "width": 11,
+        "height": 8
+      },
+      "definition": {
+        "title": "Max Disk usage",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "query_value",
+        "requests": [
+          {
+            "q": "max:system.disk.in_use{app:kafka}*100",
+            "aggregator": "last",
+            "conditional_formats": [
+              {
+                "hide_value": false,
+                "comparator": "<",
+                "palette": "white_on_green",
+                "value": 75
+              },
+              {
+                "hide_value": false,
+                "comparator": "<",
+                "palette": "white_on_yellow",
+                "value": 85
+              },
+              {
+                "hide_value": false,
+                "comparator": ">=",
+                "palette": "white_on_red",
+                "value": 85
+              }
+            ]
+          }
+        ],
+        "autoscale": true,
+        "custom_unit": "%",
+        "precision": 0
+      }
+    },
+    {
+      "id": 5023137198689458,
+      "layout": {
+        "x": 86,
+        "y": 33,
+        "width": 10,
+        "height": 8
+      },
+      "definition": {
+        "title": "Max Disk usage",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "query_value",
+        "requests": [
+          {
+            "q": "max:system.disk.in_use{app:cassandra}*100",
+            "aggregator": "last",
+            "conditional_formats": [
+              {
+                "hide_value": false,
+                "comparator": "<",
+                "palette": "white_on_green",
+                "value": 75
+              },
+              {
+                "hide_value": false,
+                "comparator": "<",
+                "palette": "white_on_yellow",
+                "value": 85
+              },
+              {
+                "hide_value": false,
+                "comparator": ">=",
+                "palette": "white_on_red",
+                "value": 85
+              }
+            ]
+          }
+        ],
+        "autoscale": true,
+        "custom_unit": "%",
+        "precision": 0
+      }
+    },
+    {
+      "id": 3048627043970902,
+      "layout": {
+        "x": 121,
+        "y": 7,
+        "width": 11,
+        "height": 8
+      },
+      "definition": {
+        "title": "Offline Partitions",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "query_value",
+        "requests": [
+          {
+            "q": "sum:kafka.replication.offline_partitions_count{app:kafka}",
+            "aggregator": "last",
+            "conditional_formats": [
+              {
+                "hide_value": false,
+                "comparator": "<=",
+                "palette": "white_on_green",
+                "value": 0
+              },
+              {
+                "hide_value": false,
+                "comparator": ">",
+                "palette": "white_on_red",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "autoscale": true,
+        "precision": 0
+      }
+    },
+    {
+      "id": 2735036804254303,
+      "layout": {
+        "x": 47,
+        "y": 15,
+        "width": 96,
+        "height": 9
+      },
+      "definition": {
+        "title_size": "13",
+        "title_align": "center",
+        "type": "manage_status",
+        "summary_type": "monitors",
+        "display_format": "counts",
+        "color_preference": "background",
+        "hide_zero_counts": true,
+        "show_last_triggered": false,
+        "query": "Kafka",
+        "sort": "status,asc",
+        "count": 50,
+        "start": 0
+      }
+    },
+    {
+      "id": 4878115725067990,
+      "layout": {
+        "x": 47,
+        "y": 41,
+        "width": 96,
+        "height": 10
+      },
+      "definition": {
+        "title_size": "13",
+        "title_align": "center",
+        "type": "manage_status",
+        "display_format": "counts",
+        "color_preference": "background",
+        "hide_zero_counts": true,
+        "show_last_triggered": false,
+        "query": "\"C*\"",
+        "sort": "status,asc",
+        "count": 50,
+        "start": 0
+      }
+    },
+    {
+      "id": 3583066656494128,
+      "layout": {
+        "x": 47,
+        "y": 66,
+        "width": 47,
+        "height": 9
+      },
+      "definition": {
+        "title_size": "13",
+        "title_align": "center",
+        "type": "manage_status",
+        "display_format": "counts",
+        "color_preference": "background",
+        "hide_zero_counts": true,
+        "show_last_triggered": false,
+        "query": "ZK",
+        "sort": "status,asc",
+        "count": 50,
+        "start": 0
+      }
+    },
+    {
+      "id": 1553088782143749,
+      "layout": {
+        "x": 0,
+        "y": 1,
+        "width": 46,
+        "height": 8
+      },
+      "definition": {
+        "type": "image",
+        "url": "https://www.teads.com/wp-content/uploads/2018/09/Teads_logo_black_120h-2019.png",
+        "sizing": "fit"
+      }
+    },
+    {
+      "id": 4330771362381108,
+      "layout": {
+        "x": 0,
+        "y": 15,
+        "width": 46,
+        "height": 9
+      },
+      "definition": {
+        "title": "Global Nodes/Brokers/Agents Down Alerts",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "manage_status",
+        "summary_type": "monitors",
+        "display_format": "countsAndList",
+        "color_preference": "background",
+        "hide_zero_counts": true,
+        "show_last_triggered": false,
+        "query": "down",
+        "sort": "status,asc",
+        "count": 50,
+        "start": 0
+      }
+    },
+    {
+      "id": 1068390669140231,
+      "layout": {
+        "x": 0,
+        "y": 24,
+        "width": 46,
+        "height": 9
+      },
+      "definition": {
+        "title": "Global CPU Usage Alerts",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "manage_status",
+        "display_format": "counts",
+        "color_preference": "background",
+        "hide_zero_counts": true,
+        "show_last_triggered": false,
+        "query": "CPU",
+        "sort": "status,asc",
+        "count": 50,
+        "start": 0
+      }
+    },
+    {
+      "id": 2592430678838518,
+      "layout": {
+        "x": 0,
+        "y": 33,
+        "width": 46,
+        "height": 9
+      },
+      "definition": {
+        "title": "Global Disk Usage Alerts",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "manage_status",
+        "display_format": "counts",
+        "color_preference": "background",
+        "hide_zero_counts": true,
+        "show_last_triggered": false,
+        "query": "disk",
+        "sort": "status,asc",
+        "count": 50,
+        "start": 0
+      }
+    },
+    {
+      "id": 6179465775780453,
+      "layout": {
+        "x": 0,
+        "y": 66,
+        "width": 46,
+        "height": 9
+      },
+      "definition": {
+        "title_size": "13",
+        "title_align": "center",
+        "type": "manage_status",
+        "display_format": "counts",
+        "color_preference": "background",
+        "hide_zero_counts": true,
+        "show_last_triggered": false,
+        "query": "jenkins",
+        "sort": "status,asc",
+        "count": 50,
+        "start": 0
+      }
+    },
+    {
+      "id": 1668385585832427,
+      "layout": {
+        "x": 0,
+        "y": 42,
+        "width": 46,
+        "height": 9
+      },
+      "definition": {
+        "title": "Global Memory Usage",
+        "title_size": "13",
+        "title_align": "center",
+        "type": "manage_status",
+        "display_format": "counts",
+        "color_preference": "background",
+        "hide_zero_counts": true,
+        "show_last_triggered": false,
+        "query": "memory",
+        "sort": "status,asc",
+        "count": 50,
+        "start": 0
+      }
+    },
+    {
+      "id": 3939499473430992,
+      "layout": {
+        "x": 95,
+        "y": 61,
+        "width": 48,
+        "height": 14
+      },
+      "definition": {
+        "type": "note",
+        "content": "Graphite/Cortex metrics are now on [Grafana](https://grafana.teads.net/d/bEj_V-8Gk/metrics?orgId=1&refresh=1m)",
+        "background_color": "white",
+        "font_size": "24",
+        "text_align": "center",
+        "vertical_align": "center",
+        "show_tick": false,
+        "tick_pos": "50%",
+        "tick_edge": "left",
+        "has_padding": true
+      }
+    }
+  ],
+  "template_variables": [],
+  "layout_type": "free",
+  "is_read_only": false,
+  "notify_list": [],
+  "id": "xte-kvm-95d"
+}
